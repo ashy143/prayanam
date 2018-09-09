@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { AppRoutingModule } from './routes/app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
@@ -18,8 +19,8 @@ import { MainComponent } from './main/main.component';
   ],
   imports: [
     BrowserModule,
-    MDBBootstrapModule.forRoot()
-    
+    MDBBootstrapModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
