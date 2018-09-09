@@ -8,6 +8,7 @@ import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
+import { SearchService } from './shared/services/search.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { MainComponent } from './main/main.component';
     MDBBootstrapModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }      
