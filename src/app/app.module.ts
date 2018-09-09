@@ -9,7 +9,6 @@ import { FooterComponent } from './shared/layout/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
