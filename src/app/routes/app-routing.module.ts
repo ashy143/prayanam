@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from '../main/main.component';
+import { HomeComponent } from '../home/home.component';
 
 import { SearchResolveService } from '../shared/services/search-resolve.service';
 
@@ -12,7 +12,7 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        component: MainComponent
+        component: HomeComponent
     },
     // {
     //     path: 'search/:from/:to/:depart',

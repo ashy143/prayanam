@@ -7,8 +7,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { MainComponent } from './main/main.component';
 import { SearchService } from './shared/services/search.service';
+import { ContactComponent } from './home/contact/contact.component';
+import { FeaturesComponent } from './home/features/features.component';
+import { PopularComponent } from './home/popular/popular.component';
+import { CardComponent } from './home/popular/card/card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,11 @@ import { SearchService } from './shared/services/search.service';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    MainComponent
+    HomeComponent,
+    ContactComponent,
+    FeaturesComponent,
+    PopularComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

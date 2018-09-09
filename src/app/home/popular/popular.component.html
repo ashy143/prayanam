@@ -1,0 +1,10 @@
+<section id="examples" class="text-center">
+
+  <h2 class="mb-5 font-weight-bold">Popular from Hyderabad</h2>
+
+  <div class="row">
+    <div *ngFor="let card of cards" class="col-lg-4 col-md-6 mb-4">
+      <app-card [card]="card"></app-card>
+    </div>
+  </div>
+</section>
