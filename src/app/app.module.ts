@@ -18,6 +18,7 @@ import { FeaturesComponent } from './home/features/features.component';
 import { PopularComponent } from './home/popular/popular.component';
 import { CardComponent } from './home/popular/card/card.component';
 import { SearchComponent } from './home/search/search.component';
+import { SearchResultsComponent } from './home/search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SearchComponent } from './home/search/search.component';
     FeaturesComponent,
     PopularComponent,
     CardComponent,
-    SearchComponent
+    SearchComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
