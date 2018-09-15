@@ -15,17 +15,18 @@ const routes: Routes = [
         path: 'home',
         component: HomeComponent
     },
-    // {
-    //     path: 'search/:from/:to/:depart',
-    //     component: SearchComponent,
-    //     resolve: {
-    //         results: SearchResolveService
-    //     }
-    // },
     {
-        path: 'searchResults',
+        path: 'search/:from/:to/:onwardDate',
+        component: SearchResultsComponent,
+        resolve: {
+            results: SearchResolveService
+        }
+    },
+    {
+        path: '**',
+        pathMatch: 'full',
         // redirect to home for now, can create a 404 page later
-        component: SearchResultsComponent
+        redirectTo: '/home'
     }
 ]
 

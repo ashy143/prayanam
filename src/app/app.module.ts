@@ -5,8 +5,12 @@ import { AppRoutingModule } from './routes/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-//import { MaterialComponentsModuleModule } from './material-components-module/material-components-module.module'
-
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule, DateAdapter, MAT_DATE_FORMATS } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
@@ -19,6 +23,7 @@ import { PopularComponent } from './home/popular/popular.component';
 import { CardComponent } from './home/popular/card/card.component';
 import { SearchComponent } from './home/search/search.component';
 import { SearchResultsComponent } from './home/search-results/search-results.component';
+import { AppDateAdapter, APP_DATE_FORMATS } from './shared/date-format/custom-date-adapter.component';
 
 @NgModule({
   declarations: [
@@ -40,12 +45,23 @@ import { SearchResultsComponent } from './home/search-results/search-results.com
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
-//    MaterialComponentsModuleModule
-    
+    HttpClientModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule
   ],
-  providers: [SearchService],
+  providers: [
+    SearchService,
+    {
+      provide: DateAdapter, useClass: AppDateAdapter
+    },
+    {
+      provide: MAT_DATE_FORMATS, useValue: APP_DATE_FORMATS
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

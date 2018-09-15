@@ -1,38 +1,28 @@
 <div class="container">
+<mat-card class="indigo">
+  <form class="example-form w-100 d-inline-flex justify-content-center align-items-center">
+    <mat-form-field>
+      <input #from class="text-white" matInput>
+      <mat-placeholder class="placeholder">From</mat-placeholder>
+      <mat-icon class="location-icon" matSuffix>location_on</mat-icon>
+    </mat-form-field>
 
-	<div class="card indigo">
+    <mat-form-field>
+      <input #to class="text-white" matInput>
+      <mat-placeholder class="placeholder">To</mat-placeholder>
+      <mat-icon class="location-icon" matSuffix>location_on</mat-icon>
+    </mat-form-field>
 
-	  <div class="card-body">
-		
-		<div class="form">
-		    <div class="form-row text-white">
-	            <div class="md-form col-md-3">
-	            	<i class="fa fa-map-marker prefix"></i>
-               		<input type="text" class="form-control" id="from">
-               		<label for="from" >From</label>
-	            </div>
-	            <div class="md-form col-md-3">
-	            	<i class="fa fa-map-marker prefix"></i>
-	                <input type="text" class="form-control" id="to">
-	                <label for="to" >To</label>
-	            </div>
-	            <div class="md-form col-md-3">
-	            	<i class="fa fa-calendar prefix"></i>
-	                <input type="text" class="form-control" id="onward_date">
-	                <label for="onward_date" >Date</label>
-	            </div>
-	            
-	            <div class="md-form col-md-3">
-	            	<button type="button" class="btn btn-warning">Search</button>
-	            </div>
-	            
-		    </div>
-		    
-		    
-		</div>
-		
-			
-	  </div>
-	
-	</div>
+    <mat-form-field>
+      <input #onwardDate class="text-white" matInput [matDatepicker]="picker">
+      <mat-placeholder class="placeholder">Date</mat-placeholder>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-button class="btn btn-warning"
+      [routerLink]="['/search', from.value, to.value, onwardDate.value]"
+      [disabled]="!from.value || !to.value || !onwardDate.value">Search</button>
+  </form>
+</mat-card>
 </div>
