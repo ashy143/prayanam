@@ -16,7 +16,9 @@
           <i class="fa fa-inr" aria-hidden="true"></i>&nbsp;{{ card.lowestPrice + '+' }}
         </span>
       </h4>
-      <a href="#" class="search-button btn btn-primary waves-light" mdbWavesEffect>Search Buses</a>
+      <a href="#" class="search-button btn btn-primary waves-light"
+        [routerLink]="['/search', card.from, card.to, dateString]"
+        mdbWavesEffect>Search Buses</a>
     </div>
 
   </div>

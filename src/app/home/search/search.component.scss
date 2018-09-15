@@ -1,3 +1,30 @@
 .text-white {
-	color: #fff;
+  color: #fff;
+}
+
+.placeholder, mat-datepicker-toggle {
+  color: #fff;
+  font-weight: 200;
+}
+
+::ng-deep .mat-form-field-underline .mat-form-field-ripple{
+  background-color: #fff !important;
+}
+
+::ng-deep .mat-form-field-underline{
+  background-color: #fff !important;
+}
+
+mat-form-field {
+  margin: 0 1em;
+  font-size: 1.25em;
+}
+
+input[matInput] {
+  font-weight: 200;
+}
+
+.location-icon {
+  font-size: 115% !important;
+  color: #fff !important;
 }

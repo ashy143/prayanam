@@ -11,7 +11,10 @@ export class CardComponent implements OnInit {
   @Input()
   card: Card;
 
-  ngOnInit() {
-  }
+  private dateString: string;
 
+  ngOnInit() {
+    const date = new Date();
+    this.dateString = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+  }
 }
